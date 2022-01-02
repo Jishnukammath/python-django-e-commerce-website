@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+
+
+
+          
+          {% for i in pr %}
+
+
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href={{i.get_url}}><img src='{{i.img.url}}' alt="" style="height:400px; width:400px; margin:2px;"></a>
+              <div class="down-content">
+                <a href="#"><h4>{{i.name}}</h4></a>
+                <br>
+                <p>{{i.desc|truncatewords:10}}</p>
+                  <br>
+                <h6>{{i.price}} Rs</h6>
+                <p>stock : {{i.stock}}</p>
+                
+               
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+ 
+{%endblock%}
+
+
+  
+
+
+

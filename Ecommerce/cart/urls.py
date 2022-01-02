@@ -1,0 +1,13 @@
+from django.urls import path
+from django.urls.resolvers import URLPattern
+
+# from cart import admin
+from . import views
+
+
+urlpatterns=[
+
+    path('cartDetails',views.cart_details,name='cartDetails'),
+    path('add/<int:product_id>',views.add_cart,name='addcart'),
+  
+]
